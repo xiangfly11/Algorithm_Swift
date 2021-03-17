@@ -9,6 +9,9 @@ import Foundation
 
 let linkedList1 = LinkedList<Int>.init()
 let linkedList2 = LinkedList<Int>.init()
+let linkedList3 = LinkedList<Int>.init()
+let linkedList4 = LinkedList<Int>.init()
+
 for i in 0 ... 6 {
     let node = ListNode<Int>.init()
     node.value = i
@@ -21,20 +24,36 @@ for i in 0 ... 6 {
     linkedList2.appendNode(node: node)
 }
 
-let head1 = linkedList1.reverseLinkedListRecusively(head: linkedList1.head)
-let head2 = linkedList2.reverseLinkedListIteratively(head: linkedList2.head)
-
-var cur1 = head1
-while cur1?.next != nil {
-    print(cur1?.value)
-    cur1 = cur1?.next
+for i in 0 ... 6 {
+    let node = ListNode<Int>.init()
+    node.value = i
+    linkedList3.appendNode(node: node)
 }
 
-var cur2 = head2
-while cur2?.next != nil {
-    print(cur2?.value)
-    cur2 = cur2?.next
+for i in 0 ... 6 {
+    let node = ListNode<Int>.init()
+    node.value = i
+    linkedList4.appendNode(node: node)
 }
+
+
+if let head1 = linkedList1.reverseLinkedListRecusively(head: linkedList1.head) {
+    linkedList1.printLinkedList(head: head1)
+    print("***** Head1 finished *****")
+}
+if let head2 = linkedList2.reverseLinkedListIteratively(head: linkedList2.head) {
+    linkedList2.printLinkedList(head: head2)
+    print("***** Head2 finished *****")
+}
+if let head3 = linkedList3.reverseLinkedListTo(head: linkedList3.head, length: linkedList3.count - 2) {
+    linkedList3.printLinkedList(head: head3)
+    print("***** Head3 finished *****")
+}
+if let head4 = linkedList4.reverseLinkedListBetween(head: linkedList4.head, start: 2, end: 5) {
+    linkedList4.printLinkedList(head: head4)
+    print("***** Head4 finished *****")
+}
+
 
 print("finished")
 
