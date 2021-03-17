@@ -33,6 +33,9 @@ class LinkedList<T> {
     }
     
     
+    /// 递归反转整个单向链表
+    /// - Parameter head: 链表头节点
+    /// - Returns: 链表头节点
     func reverseLinkedListRecusively(head: Node<T>?) -> Node<T>? {
         if head?.next == nil {
             return head
@@ -44,6 +47,10 @@ class LinkedList<T> {
         return last
     }
     
+    
+    /// 迭代反转整个单向链表
+    /// - Parameter head: 链表头节点
+    /// - Returns: 链表头节点
     func reverseLinkedListIteratively(head: Node<T>?) -> Node<T>? {
         if head?.next == nil {
             return head
