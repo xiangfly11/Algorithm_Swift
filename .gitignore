@@ -1,0 +1,7 @@
+*.xcodeproj/xcuserdata
+*.xcodeproj/project.xcworkspace/xcuserdata
+*.xcworkspace/xcuserdata
+*.DS_Store
+*.xcworkspace/xcuserdata
+*.xcodeproj/xcuserdata
+default.profraw
