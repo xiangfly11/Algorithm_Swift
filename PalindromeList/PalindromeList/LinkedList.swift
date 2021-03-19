@@ -100,8 +100,6 @@ class LinkedList<T: Equatable> {
         //反转慢指针所指向节点之后的链表
         var right = reverse(head: slow)
         var left = head
-        //设置一个反转之后的右边的头节点，在最后用来还原这个链表
-        let originalRight = right
         
         while right != nil {
             if left?.value != right?.value {
